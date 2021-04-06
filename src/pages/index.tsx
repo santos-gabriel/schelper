@@ -1,12 +1,16 @@
 
 
-import styles from '../styles/components/Home.module.css'
+import { Head } from 'next/document';
+import { Login } from '../components/Login';
+
+import styles from '../styles/components/Home.module.css';
 
 
 export default function Home() {
   return (
-    <>
-      <h1>Hello world, you are on login page</h1>
+    <>      
+      <title>ScHelper | Sign In</title>
+      <Login />
     </>
   )
 }

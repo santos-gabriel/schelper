@@ -11,6 +11,14 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: 0;  
+}
+
 * {
   box-sizing: border-box;
 }

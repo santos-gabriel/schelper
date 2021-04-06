@@ -1,5 +1,4 @@
 import { GetServerSideProps } from "next";
-import { HeaderHome } from "../../components/HeaderHome";
 import { ProfileProvider } from "../../contexts/ProfileContext";
 
 
@@ -13,8 +12,9 @@ export default function Home(props: HomeProps) {
         
         return (
             <>
+                <title>ScHelper | Home</title>
                 <ProfileProvider userNameProps={props.userName}>
-                    <HeaderHome />
+                    <h1>Hello world</h1>
                 </ProfileProvider>
             </>
         );    
