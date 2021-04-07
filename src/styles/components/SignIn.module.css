@@ -1,0 +1,70 @@
+.container {
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+
+    height: 100vh;
+    max-width: 992px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerSignIn {
+    flex: 1 1;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    gap: 2rem;
+
+    align-content: center;
+    
+}
+
+.signIn {
+    display: flex;
+    flex-direction: column;
+    align-self: center;  
+    max-width: 20rem;
+    
+    background: var(--purple);
+
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.signIn div input,
+.signIn div button{    
+    width: 14rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.signIn div:last-child {    
+    display: flex;
+    flex-direction: column;    
+}
+
+.signIn div button {
+    background: var(--yellow);
+}
+
+.signIn div button:hover {
+    background: var(--yellow-dark);
+    color: var(--white);
+}
+
+.signIn div a {
+    color: var(--white);
+}
+
+.signIn div a:hover {
+    color: var(--yellow-dark);
+}
+
+.signIn div input:focus { 
+    background: var(--yellow);
+    color: var(--white);
+}

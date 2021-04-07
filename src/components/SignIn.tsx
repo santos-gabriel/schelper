@@ -1,10 +1,10 @@
 
 
 import { useState } from 'react';
-import styles from '../styles/components/Login.module.css';
+import styles from '../styles/components/SignIn.module.css';
 
 
-export function Login() {
+export function SignIn() {
 
     const [ userName, setUserName ] = useState('');
     const [ userPassword, setUserPassword] = useState('');
@@ -20,13 +20,13 @@ export function Login() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.containerLogin}>
+            <div className={styles.containerSignIn}>
                 
-                <div className={styles.loginImg}>
+                <div className={styles.SignInImg}>
                     <img src="/schedule.svg" alt="Schedule"/>
                 </div>
                 
-                <div className={styles.login}>
+                <div className={styles.signIn}>
                     
                     <div>
                         <input type="text" placeholder="Login" onChange={(e) => setUserName(e.target.value)}/>
