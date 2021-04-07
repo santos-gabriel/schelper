@@ -1,0 +1,59 @@
+.container {
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+
+    height: 100vh;
+    max-width: 992px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* background: url(/schedule.svg) no-repeat;     */
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    align-self: center;  
+    max-width: 20rem;
+    
+    background: var(--purple);
+
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.signUp div input,
+.signUp div button{    
+    width: 14rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.signUp div:last-child {    
+    display: flex;
+    flex-direction: column;    
+}
+
+.signUp div button {
+    background: var(--yellow);
+}
+
+.signUp div button:hover {
+    background: var(--yellow-dark);
+    color: var(--white);
+}
+
+.signUp div a {
+    color: var(--white);
+}
+
+.signUp div a:hover {
+    color: var(--yellow-dark);
+}
+
+.signUp div input:focus { 
+    background: var(--yellow);
+    color: var(--white);
+}
