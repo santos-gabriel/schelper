@@ -22,7 +22,7 @@ export function SignUp() {
                 </div>
 
                 <div>
-                    <button onClick={handleSignUp}>Sign In</button>
+                    <button onClick={handleSignUp}>Sign Up</button>
                     <a href="/">Já possuí cadastro? <br/>Realize um sign in</a>
                 </div>
 
