@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) =>{
     const { jwtTokenAcess } = ctx.req.cookies;
     const userName = ctx.query.username;
     
-    if (userName === undefined || userName === null || userName.length <= 0) {        
+    if (jwtTokenAcess === undefined || jwtTokenAcess === null || jwtTokenAcess.length <= 0) {        
         ctx.res.writeHead(303, { Location: '/' });
         ctx.res.end();
     }     

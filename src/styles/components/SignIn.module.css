@@ -40,6 +40,7 @@
     height: 2rem;
     border-radius: 0.4rem;
     margin-bottom: 1rem;
+    transition: background-color 0.5s;    
 }
 
 .signIn div:last-child {    
@@ -51,12 +52,13 @@
     background: var(--yellow);
 }
 
-.signIn div button:hover {
-    background: var(--yellow-dark);
+.signIn div a {
     color: var(--white);
+    transition: color 0.5s;
 }
 
-.signIn div a {
+.signIn div button:hover {
+    background: var(--yellow-dark);
     color: var(--white);
 }
 

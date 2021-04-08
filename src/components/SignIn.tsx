@@ -1,7 +1,11 @@
 
 
+
 import { useState } from 'react';
+
 import styles from '../styles/components/SignIn.module.css';
+
+import { setCookieAndRedirect } from '../utils/cookie';
 
 
 export function SignIn() {
@@ -9,7 +13,7 @@ export function SignIn() {
     const [ userName, setUserName ] = useState('');
     const [ userPassword, setUserPassword] = useState('');
 
-    function handleSignIn(){
+    async function handleSignIn(){
         if (userName === undefined || userName === null || userName.length <= 0) {
             return;
         }
@@ -17,7 +21,11 @@ export function SignIn() {
             return;
         }
 
-        
+        const routerRedirect: String = `/home?username=${userName}`;
+        const cookieName: string = 'jwtTokenAcess';
+        const cookieValue: string = '123';        
+
+        await setCookieAndRedirect({cookieName, cookieValue, routerRedirect});
 
     }
 
