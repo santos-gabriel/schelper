@@ -1,0 +1,44 @@
+.containerNavbar {
+    position: absolute;
+    top: 15vh;
+}
+
+.container {
+    position: relative;     
+
+    border-radius: 0.7rem;
+    width: 5rem;
+
+    background: var(--purple);
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;    
+}
+
+.container div:first-child {
+    margin-bottom: 10rem;
+}
+
+.container div button {
+    border: none;
+    background: none;
+    margin-top: 1rem;
+    outline: none;   
+    padding: 0.5rem 0; 
+    border-radius: 0.7rem;
+}
+
+.container div button:hover {
+    background: var(--purple-dark);
+}
+
+.container div button:first-child {
+    margin-top: 0;
+}
+
+.container div button img {
+    max-width: 4rem;
+    max-height: 4rem;
+}
