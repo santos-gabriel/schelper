@@ -1,4 +1,5 @@
 import { GetServerSideProps } from "next";
+import { Navbar } from "../../components/Navbar";
 import { ProfileProvider } from "../../contexts/ProfileContext";
 
 
@@ -14,7 +15,7 @@ export default function Home(props: HomeProps) {
             <>
                 <title>ScHelper | Home</title>
                 <ProfileProvider userNameProps={props.userName}>
-                    <h1>Hello world</h1>
+                    <Navbar />
                 </ProfileProvider>
             </>
         );    
