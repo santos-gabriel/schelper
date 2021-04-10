@@ -37,10 +37,10 @@
 .signIn div input,
 .signIn div button{    
     width: 14rem;
-    height: 2rem;
-    border-radius: 0.4rem;
+    height: 2.7rem;
+    border-radius: 0.7rem;
     margin-bottom: 1rem;
-    transition: background-color 0.5s;    
+    transition: background-color 0.5s;       
 }
 
 .signIn div:last-child {    
