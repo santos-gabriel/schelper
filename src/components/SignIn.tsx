@@ -6,6 +6,7 @@ import { useState } from 'react';
 import styles from '../styles/components/SignIn.module.css';
 
 import { setCookieAndRedirect } from '../utils/cookie';
+import { getAuthentication } from '../services/authentication';
 
 
 export function SignIn() {
@@ -23,7 +24,7 @@ export function SignIn() {
 
         const routerRedirect: String = `/home?username=${userName}`;
         const cookieName: string = 'jwtTokenAcess';
-        const cookieValue: string = '123';        
+        const cookieValue: string = getAuthentication({userName, userPassword});        
 
         await setCookieAndRedirect({cookieName, cookieValue, routerRedirect});
 
