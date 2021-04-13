@@ -30,8 +30,10 @@ export function SignIn() {
 
     }
 
-    function handleKeyDownPassword() {
-        handleSignIn();
+    function handleKeyDownPassword(e) {        
+        if (e.keyCode === 13) {
+            handleSignIn();
+        }
     }
 
     return (
@@ -50,7 +52,7 @@ export function SignIn() {
                             type="password" 
                             placeholder="Senha" 
                             onChange={(e) => setUserPassword(e.target.value)} 
-                            onKeyDown={handleKeyDownPassword}
+                            onKeyDown={(e) => handleKeyDownPassword(e)}
                         />
                     </div>
 
