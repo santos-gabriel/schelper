@@ -5,6 +5,7 @@ import { Account } from "../../components/Account";
 import { HorizontalSchedule } from "../../components/HorizontalSchedule";
 import { Navbar } from "../../components/Navbar";
 import { Planning } from "../../components/Planning";
+import { Schedule } from '../../components/Schedule';
 import { Settings } from "../../components/Settings";
 import { VerticalSchedule } from "../../components/VerticalSchedule";
 import { ProfileProvider } from "../../contexts/ProfileContext";
@@ -37,10 +38,10 @@ export default function Home(props: HomeProps) {
                             () => {
                                 switch(indexItemNavbar) {
                                 case 0:
-                                    return <VerticalSchedule />;
+                                    return <Schedule orientation='Landscape' />;
                                     break;
                                 case 1: 
-                                    return <HorizontalSchedule />; 
+                                    return <Schedule orientation='Portrait' />; 
                                     break;
                                 case 2:
                                     return <Planning />; 
