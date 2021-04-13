@@ -30,6 +30,10 @@ export function SignIn() {
 
     }
 
+    function handleKeyDownPassword() {
+        handleSignIn();
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.containerSignIn}>
@@ -42,7 +46,12 @@ export function SignIn() {
                     
                     <div>
                         <input type="text" placeholder="Login" onChange={(e) => setUserName(e.target.value)}/>
-                        <input type="password" placeholder="Senha" onChange={(e) => setUserPassword(e.target.value)}/>
+                        <input 
+                            type="password" 
+                            placeholder="Senha" 
+                            onChange={(e) => setUserPassword(e.target.value)} 
+                            onKeyDown={handleKeyDownPassword}
+                        />
                     </div>
 
                     <div>
