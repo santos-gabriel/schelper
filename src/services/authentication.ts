@@ -1,3 +1,4 @@
+import { setCookie } from '../utils/cookie';
 
 interface authenticationUserProps {
     userName: string;
@@ -5,5 +6,8 @@ interface authenticationUserProps {
 }
 
 export function getAuthentication(user: authenticationUserProps) : string {
+    const cookieName = 'username';
+    const cookieValue = user.userName;
+    setCookie({cookieName, cookieValue});
     return `123`;
 }
