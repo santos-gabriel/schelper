@@ -42,3 +42,27 @@
     max-width: 4rem;
     max-height: 4rem;
 }
+
+@media (max-width: 1400px) {
+    .containerNavbar {
+        top: 10vh;
+    }
+
+    .container div button {
+        margin-top: 0.7rem;        
+        padding: 0;         
+    }
+
+}
+
+@media (max-width: 1080px) {
+    .containerNavbar {
+        top: 10vh;
+    }
+}
+
+@media(max-width: 720px) {
+    .containerNavbar {        
+        top: 10vh;
+    }
+}
