@@ -1,11 +1,20 @@
 import styles from '../styles/components/Navbar.module.css';
 
+import { removeCookie, removeCookieAndRedirect } from '../utils/cookie';
+
 interface NavbarProps {
     handleClickNavbar: (a:Number) => void;
 }
 
 export function Navbar({handleClickNavbar}: NavbarProps ) {
         
+    function handleClickNavbarUserLogout() {
+        removeCookie('username');
+        const cookieName: string = 'jwtTokenAcess';
+        const routerRedirect: string = '/';
+        removeCookieAndRedirect({cookieName, routerRedirect});
+    }
+
     return (
         <div className={styles.containerNavbar}>
             <div className={styles.container}>
@@ -29,7 +38,8 @@ export function Navbar({handleClickNavbar}: NavbarProps ) {
                         <img src="/settings.svg" alt="Settings"/>
                     </button>
                     
-                    <button onClick={() => {handleClickNavbar(4)}}>                        
+                    {/* <button onClick={() => {handleClickNavbar(4)}}>                         */}
+                    <button onClick={handleClickNavbarUserLogout}>                        
                         <img src="/user.svg" alt="User"/>
                     </button>
                 </div>
