@@ -20,26 +20,26 @@ export function Navbar({handleClickNavbar}: NavbarProps ) {
             <div className={styles.container}>
 
                 <div>
-                    <button onClick={() => {handleClickNavbar(0)}}>
+                    <button title="Visualização Horizontal" onClick={() => {handleClickNavbar(0)}}>
                         <img src="/calendar.svg" alt="Calendar"/>
                     </button>
                     
-                    <button onClick={() => {handleClickNavbar(1)}}>
+                    <button title="Visualização Vertical" onClick={() => {handleClickNavbar(1)}}>
                         <img src="/planning_list.svg" alt="Planning list"/>
                     </button>
                     
-                    <button onClick={() => {handleClickNavbar(2)}}>                        
+                    <button title="Adicionar Atividade" onClick={() => {handleClickNavbar(2)}}>                        
                         <img src="/planning.svg" alt="Planning"/>
                     </button>                    
                 </div>
 
                 <div>
-                    <button onClick={() => {handleClickNavbar(3)}}>
+                    <button title="Configurações" onClick={() => {handleClickNavbar(3)}}>
                         <img src="/settings.svg" alt="Settings"/>
                     </button>
                     
                     {/* <button onClick={() => {handleClickNavbar(4)}}>                         */}
-                    <button onClick={handleClickNavbarUserLogout}>                        
+                    <button title="Conta" onClick={handleClickNavbarUserLogout}>                        
                         <img src="/user.svg" alt="User"/>
                     </button>
                 </div>
