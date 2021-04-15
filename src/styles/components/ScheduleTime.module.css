@@ -1,7 +1,28 @@
 .verticalScheduleBarTime {
-    
+    display: flex;
+    flex-direction: column;    
 }
 
 .horizontalScheduleBarTime {
     
+}
+
+.verticalScheduleBarTime div {
+    display: flex;    
+    flex-direction: column;
+    margin-left: 6rem;
+    border-radius: 0.3rem;
+
+    width: auto;
+    max-width: 4rem;
+
+    align-items: center;
+    background-color: var(--gray-line);
+}
+
+.verticalScheduleBarTime div span {
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--purple);
 }
