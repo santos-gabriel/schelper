@@ -1,5 +1,5 @@
 .containerNavbar {
-    position: absolute;
+    position: fixed;
     top: 15vh;
 }
 
@@ -45,7 +45,7 @@
 
 @media (max-width: 1400px) {
     .containerNavbar {
-        top: 10vh;
+        top: 12vh;
     }
 
     .container div button {
@@ -57,12 +57,12 @@
 
 @media (max-width: 1080px) {
     .containerNavbar {
-        top: 10vh;
+        top: 12vh;
     }
 }
 
 @media(max-width: 720px) {
     .containerNavbar {        
-        top: 10vh;
+        top: 12vh;
     }
 }
