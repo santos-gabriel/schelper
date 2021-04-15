@@ -2,8 +2,15 @@
 
 export function LandscapeScheduleDays() {
     return (
-        <>
-            <h1>You are in LandscapeScheduleDays</h1>
-        </>
+        
+        <div>
+            <span>Dom</span>
+            <span>Seg</span>
+            <span>Ter</span>
+            <span>Qua</span>
+            <span>Qui</span>
+            <span>Sex</span>
+            <span>Sab</span>
+        </div>        
     );
 }

@@ -1,4 +1,5 @@
-import styles from '../styles/components/VerticalSchedule.module.css';
+import stylesDays from '../styles/components/ScheduleDays.module.css';
+import sytlesTime from '../styles/components/ScheduleTime.module.css';
 import { LandscapeScheduleTime } from './LandscapeScheduleTime';
 import { PortraitScheduleDays } from './PortraitScheduleDays';
 
@@ -6,8 +7,13 @@ import { PortraitScheduleDays } from './PortraitScheduleDays';
 export function VerticalSchedule() {
     return (
         <>
-            <PortraitScheduleDays />
-            <LandscapeScheduleTime />
+            <div className={stylesDays.verticalScheduleBarDays}>
+                <LandscapeScheduleTime />
+            </div>
+            <div className={sytlesTime.horizontalScheduleBarTime}>
+                <PortraitScheduleDays />
+            </div>
         </>
+        
     );
 }
