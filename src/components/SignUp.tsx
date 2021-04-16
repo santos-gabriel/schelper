@@ -1,4 +1,5 @@
 
+import { createMuiTheme, TextField, ThemeProvider } from '@material-ui/core';
 import { useState } from 'react';
 import styles from '../styles/components/Signup.module.css';
 
@@ -7,6 +8,20 @@ export function SignUp() {
     const [ userName, setUserName ] = useState('');
     const [ userPassword, setUserPassword ] = useState('');
 
+    const theme = createMuiTheme({
+        palette: {            
+            primary: {
+                main: '#ffffffff'
+            },
+            secondary: {
+                main: '#255000'
+            },
+            text: {
+                primary: '#ffffffff',
+                secondary: '#ffffffff'
+            }
+        },         
+    })
 
     function handleSignUp() {
 
@@ -17,8 +32,14 @@ export function SignUp() {
             <div className={styles.signUp}>
                 
                 <div>
-                    <input type="text" placeholder="Login" onChange={(e) => setUserName(e.target.value)}/>
-                    <input type="password" placeholder="Senha" onChange={(e) => setUserPassword(e.target.value)}/>
+                    <ThemeProvider theme={theme}>
+                        <TextField label="Login" onChange={(e) => setUserName(e.target.value)}/>                            
+                        <TextField 
+                            type="password" 
+                            label="Senha" 
+                            onChange={(e) => setUserPassword(e.target.value)}                            
+                        />
+                    </ThemeProvider>
                 </div>
 
                 <div>

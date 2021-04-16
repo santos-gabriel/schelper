@@ -7,6 +7,7 @@ import styles from '../styles/components/SignIn.module.css';
 
 import { setCookieAndRedirect } from '../utils/cookie';
 import { getAuthentication } from '../services/authentication';
+import { createMuiTheme, Input, TextField, ThemeProvider } from '@material-ui/core';
 
 
 export function SignIn() {
@@ -14,7 +15,23 @@ export function SignIn() {
     const [ userName, setUserName ] = useState('');
     const [ userPassword, setUserPassword] = useState('');
 
+    const theme = createMuiTheme({
+        palette: {            
+            primary: {
+                main: '#ffffffff'
+            },
+            secondary: {
+                main: '#255000'
+            },
+            text: {
+                primary: '#ffffffff',
+                secondary: '#ffffffff'
+            }
+        },         
+    })
+
     async function handleSignIn(){
+        console.log(`userName=${userName} | userPassword=${userPassword}`);
         if (userName === undefined || userName === null || userName.length <= 0) {
             return;
         }
@@ -38,7 +55,7 @@ export function SignIn() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.containerSignIn}>
+            <div className={styles.containerSignIn}>            
                 
                 <div className={styles.SignInImg}>
                     <img src="/schedule.svg" alt="Schedule"/>
@@ -47,13 +64,15 @@ export function SignIn() {
                 <div className={styles.signIn}>
                     
                     <div>
-                        <input type="text" placeholder="Login" onChange={(e) => setUserName(e.target.value)}/>
-                        <input 
-                            type="password" 
-                            placeholder="Senha" 
-                            onChange={(e) => setUserPassword(e.target.value)} 
-                            onKeyDown={(e) => handleKeyDownPassword(e)}
-                        />
+                        <ThemeProvider theme={theme}>
+                            <TextField label="Login" onChange={(e) => setUserName(e.target.value)}/>                            
+                            <TextField 
+                                type="password" 
+                                label="Senha" 
+                                onChange={(e) => setUserPassword(e.target.value)}
+                                onKeyDown={(e) => handleKeyDownPassword(e)}
+                            />
+                        </ThemeProvider>
                     </div>
 
                     <div>
